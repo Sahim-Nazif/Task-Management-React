@@ -1,8 +1,13 @@
+import Header from './components/Header'
+
+
 
 const App=()=> {
+
+
   return (
-    <div className="App">
-     <h1>Task Management</h1>
+    <div className="container">
+      <Header/>
     </div>
   );
 }

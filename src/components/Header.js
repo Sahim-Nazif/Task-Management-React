@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import Button from './Button'
 
 const Header = ({title}) => {
     return (
        <header className='header'>
            <h1>{title}</h1>
-           <button className='btn'>Add Task</button>
+            <Button color='crimson' text='Add Task'/>
+      
        </header>
     )
 }
 
 Header.defaultProps = {
-    title:'Task Managements'
+    title:'Task Management'
 }
 
 Header.propTypes={

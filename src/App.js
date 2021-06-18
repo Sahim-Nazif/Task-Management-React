@@ -5,6 +5,7 @@ import AddTask from './components/AddTask'
 
 
 const App=()=> {
+  
   const [tasks, setTasks]=useState([ {
     id:1,
     text:'One Hour Exercise',
@@ -24,6 +25,14 @@ const App=()=> {
     reminder:true,
 }
 ])
+//add task
+
+const addTask=(task)=>{
+
+  const id=Math.floor(Math.random()* 10000) + 1
+  const newTask={ id, ...task}
+  setTasks([...tasks, newTask])
+}
 //deleting tasks
 const deleteTask=(id)=>{
 
@@ -43,7 +52,7 @@ const toggleReminder=(id)=>{
      )  : 
      ('No Task to Display'
      )}
-     <AddTask/>
+     <AddTask onAdd={addTask}/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Header from './components/Header'
 import Task from './components/Task'
+import AddTask from './components/AddTask'
 
 
 const App=()=> {
@@ -42,6 +43,7 @@ const toggleReminder=(id)=>{
      )  : 
      ('No Task to Display'
      )}
+     <AddTask/>
     </div>
   );
 }
